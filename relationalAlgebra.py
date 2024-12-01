@@ -162,7 +162,32 @@ class RelationalAlgebra(mn.Scene):
         self.play(mn.FadeOut(highlight_value_2), mn.FadeOut(highlight_value_4))
         self.wait(5)
 
-        self.play(mn.FadeOut(TextoDominio), mn.FadeOut(textoD2))
+        self.play(mn.FadeOut(TextoDominio), mn.FadeOut(textoD1), mn.FadeOut(textoD2))
+
+        self.wait(3)
+
+        Subconjunto = mn.Tex('Tabla = D1 x D2')
+        Subconjunto.to_corner(mn.UL)
+
+        self.play(mn.Write(Subconjunto))
+
+        self.wait(2)
+
+        
+        self.play(mn.FadeOut(table,table2))
+
+        self.wait(2)
+
+    ##Definicion Formal
+
+
+    ##TODO: Explicar operadores
+
+        title2 = mn.Text("Operadores", font_size=60)
+        self.play(mn.Write(title2))
+
+
+
 
 
 
